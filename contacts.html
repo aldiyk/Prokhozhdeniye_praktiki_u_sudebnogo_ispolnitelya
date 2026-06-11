@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация и форма обратной связи.">
+  <title>Контакты | Учебная практика</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Основная навигация">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon" aria-hidden="true">⚖</span>
+      Учебная практика
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html"        class="nav__link">Главная</a></li>
+      <li><a href="about.html"        class="nav__link">О деятельности</a></li>
+      <li><a href="practice.html"     class="nav__link">Практика</a></li>
+      <li><a href="optimization.html" class="nav__link">Оптимизация</a></li>
+      <li><a href="contacts.html"     class="nav__link">Контакты</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <nav class="breadcrumb" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Контакты</span>
+    </nav>
+    <p class="page-hero__eyebrow">📞 Связь</p>
+    <h1 class="page-hero__title">Контакты</h1>
+    <p class="page-hero__desc">
+      Контактная информация организации и форма обратной связи.
+    </p>
+  </div>
+</header>
+
+<!-- CONTACTS & FORM -->
+<section class="section section--white" aria-labelledby="contacts-heading">
+  <div class="section__inner">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info -->
+      <div>
+        <p class="section__eyebrow">Реквизиты</p>
+        <h2 class="section__title" id="contacts-heading" style="text-align:left;margin-bottom:24px;">Информация об организации</h2>
+
+        <div class="contact-info">
+          <div class="contact-item reveal">
+            <span class="contact-item__icon" aria-hidden="true">🏛️</span>
+            <div>
+              <p class="contact-item__label">Организация</p>
+              <p class="contact-item__value">Отдел судебных исполнителей № 3 г. Шымкент</p>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-1">
+            <span class="contact-item__icon" aria-hidden="true">📍</span>
+            <div>
+              <p class="contact-item__label">Адрес</p>
+              <p class="contact-item__value">050000, г. Шымкент, проспект Кунаева, 83/2</p>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-2">
+            <span class="contact-item__icon" aria-hidden="true">📞</span>
+            <div>
+              <p class="contact-item__label">Телефон приёмной</p>
+              <p class="contact-item__value">+7 (727) 272-00-00</p>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-3">
+            <span class="contact-item__icon" aria-hidden="true">📱</span>
+            <div>
+              <p class="contact-item__label">Горячая линия</p>
+              <p class="contact-item__value">1400 (бесплатно)</p>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <span class="contact-item__icon" aria-hidden="true">✉️</span>
+            <div>
+              <p class="contact-item__label">Электронная почта</p>
+              <p class="contact-item__value">shymkent-si3@adilet.gov.kz</p>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-1">
+            <span class="contact-item__icon" aria-hidden="true">🕐</span>
+            <div>
+              <p class="contact-item__label">Часы работы</p>
+              <p class="contact-item__value">Пн–Пт: 09:00–18:00, обед 13:00–14:00</p>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-2">
+            <span class="contact-item__icon" aria-hidden="true">👤</span>
+            <div>
+              <p class="contact-item__label">Руководитель практики</p>
+              <p class="contact-item__value">Частный судебный исполнитель Құдайберген Ә.А.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAP PLACEHOLDER -->
+        <div class="map-placeholder reveal" style="margin-top:24px;" role="img" aria-label="Карта расположения организации">
+          <span aria-hidden="true">🗺️</span>
+          <span>г. Шымкент, проспект Кунаева, 83/2</span>
+          <span style="font-size:0.78rem;color:var(--color-text-muted);">Карта отображается в реальном проекте</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="reveal reveal-delay-1">
+        <div class="info-block">
+          <p class="info-block__title">Форма обратной связи</p>
+          <p style="font-size:0.88rem;color:var(--color-text-muted);margin-bottom:24px;line-height:1.7;">
+            Заполните форму, и мы ответим на ваш вопрос в течение одного рабочего дня.
+          </p>
+
+          <form class="form" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="name">Имя *</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                  autocomplete="given-name"
+                >
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="surname">Фамилия</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  placeholder="Ваша фамилия"
+                  autocomplete="family-name"
+                >
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="email">Email *</label>
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@mail.kz"
+                required
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="phone">Телефон</label>
+              <input
+                class="form__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (___) ___-__-__"
+                autocomplete="tel"
+              >
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="subject">Тема обращения *</label>
+              <select class="form__select" id="subject" name="subject" required>
+                <option value="" disabled selected>Выберите тему</option>
+                <option value="practice">Вопрос по практике</option>
+                <option value="execution">Исполнительное производство</option>
+                <option value="documents">Документы и справки</option>
+                <option value="complaint">Жалоба или обращение</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="message">Сообщение *</label>
+              <textarea
+                class="form__textarea"
+                id="message"
+                name="message"
+                placeholder="Опишите ваш вопрос или обращение..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form__group">
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.85rem;color:var(--color-text-muted);">
+                <input type="checkbox" required style="margin-top:3px;flex-shrink:0;">
+                Я согласен(а) на обработку персональных данных в соответствии с
+                Законом РК «О персональных данных и их защите»
+              </label>
+            </div>
+
+            <div id="form-success" class="form__message form__message--success" role="alert">
+              ✅ Ваше сообщение успешно отправлено! Мы свяжемся с вами в течение одного рабочего дня.
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL INFO -->
+<section class="section section--alt" aria-labelledby="info-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Полезно знать</p>
+      <h2 class="section__title" id="info-heading">Информация для посетителей</h2>
+    </div>
+    <div class="cards-grid">
+      <article class="card reveal">
+        <p class="card__icon" aria-hidden="true">📋</p>
+        <h3 class="card__title">Приём граждан</h3>
+        <p class="card__text">Запись на приём осуществляется через портал eGov.kz или по телефону приёмной. При себе необходимо иметь удостоверение личности и документы по существу обращения.</p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <p class="card__icon" aria-hidden="true">🔎</p>
+        <h3 class="card__title">Проверка производства</h3>
+        <p class="card__text">Узнать о наличии исполнительного производства можно на портале <strong>is.adilet.gov.kz</strong> или через мобильное приложение «Судебный кабинет» по ИИН.</p>
+      </article>
+      <article class="card reveal reveal-delay-2">
+        <p class="card__icon" aria-hidden="true">🎓</p>
+        <h3 class="card__title">Учебная практика</h3>
+        <p class="card__text">По вопросам прохождения учебной практики студентами обращайтесь заблаговременно — не позднее чем за 2 недели до предполагаемой даты начала практики.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">
+        <span class="footer__brand-icon" aria-hidden="true">⚖</span>
+        Учебная практика
+      </div>
+      <p class="footer__desc">
+        Отчёт о прохождении учебной практики студента специальности «Программное обеспечение» у судебного исполнителя.
+      </p>
+    </div>
+    <div>
+      <p class="footer__nav-title">Разделы</p>
+      <nav class="footer__nav-links" aria-label="Нижняя навигация">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О деятельности</a>
+        <a href="practice.html">Практика</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer__nav-title">Проект</p>
+      <nav class="footer__nav-links">
+        <a href="optimization.html">Оптимизация сайта</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Учебная практика. Специальность «Программное обеспечение».</span>
+    <span>Отчёт студента</span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

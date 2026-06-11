@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебная практика студента специальности Программное обеспечение у судебного исполнителя.">
+  <title>Учебная практика | Главная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Основная навигация">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon" aria-hidden="true">⚖</span>
+      Учебная практика
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html"        class="nav__link">Главная</a></li>
+      <li><a href="#about"            class="nav__link">О деятельности</a></li>
+      <li><a href="practice.html"     class="nav__link">Практика</a></li>
+      <li><a href="optimization.html" class="nav__link">Оптимизация</a></li>
+      <li><a href="contacts.html"     class="nav__link">Контакты</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <p class="hero__eyebrow">📋 Учебная практика · 2025</p>
+      <h1 class="hero__title">
+        Практика у<br>
+        <em>судебного исполнителя</em>
+      </h1>
+      <p class="hero__subtitle">
+        Отчёт о прохождении учебной практики студента специальности
+        «Программное обеспечение». Знакомство с правовой системой,
+        документооборотом и цифровыми инструментами учёта.
+      </p>
+      <div class="hero__buttons">
+        <a href="practice.html" class="btn btn--primary">Читать отчёт</a>
+        <a href="#about"    class="btn btn--outline">О деятельности</a>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__card-stack">
+        <div class="hero__card hero__card--main">
+          <p class="hero__card-label">Место практики</p>
+          <p class="hero__card-value">Отдел судебных исполнителей</p>
+        </div>
+        <div class="hero__card hero__card--tag">
+          <p class="hero__card-label">Специальность</p>
+          <p class="hero__card-value">Программное обеспечение</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="section section--white" aria-labelledby="stats-heading">
+  <div class="section__inner">
+    <div class="stats-row">
+      <div class="stat-item reveal">
+        <p class="stat-item__value">4</p>
+        <p class="stat-item__label">Недели практики</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <p class="stat-item__value">20+</p>
+        <p class="stat-item__label">Выполненных задач</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <p class="stat-item__value">5</p>
+        <p class="stat-item__label">Изученных систем</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <p class="stat-item__value">100%</p>
+        <p class="stat-item__label">Практика завершена</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV CARDS -->
+<section class="section" aria-labelledby="sections-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Разделы сайта</p>
+      <h2 class="section__title" id="sections-heading">Навигация по проекту</h2>
+      <p class="section__desc">Выберите интересующий раздел для подробного ознакомления с материалами практики.</p>
+    </div>
+    <nav class="nav-cards" aria-label="Разделы сайта">
+      <a href="#about" class="nav-card reveal">
+        <p class="nav-card__icon" aria-hidden="true">⚖️</p>
+        <p class="nav-card__title">О деятельности</p>
+        <p class="nav-card__desc">Кто такой судебный исполнитель и его роль в правовой системе</p>
+      </a>
+      <a href="#practice" class="nav-card reveal reveal-delay-1">
+        <p class="nav-card__icon" aria-hidden="true">📝</p>
+        <p class="nav-card__title">Практика</p>
+        <p class="nav-card__desc">Ход прохождения практики, задачи и полученные навыки</p>
+      </a>
+      <a href="optimization.html" class="nav-card reveal reveal-delay-2">
+        <p class="nav-card__icon" aria-hidden="true">🚀</p>
+        <p class="nav-card__title">Оптимизация</p>
+        <p class="nav-card__desc">Методы и подходы к повышению производительности сайта</p>
+      </a>
+      <a href="contacts.html" class="nav-card reveal reveal-delay-3">
+        <p class="nav-card__icon" aria-hidden="true">📞</p>
+        <p class="nav-card__title">Контакты</p>
+        <p class="nav-card__desc">Контактная информация и форма обратной связи</p>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section id="about" class="section section--alt" aria-labelledby="about-preview-heading">
+  <div class="section__inner">
+    <div class="two-col">
+      <div>
+        <p class="section__eyebrow">Кратко о деятельности</p>
+        <h2 class="section__title" id="about-preview-heading">Судебный исполнитель: кто это?</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.75;">
+          Судебный исполнитель — должностное лицо, уполномоченное государством
+          исполнять судебные акты и акты других органов. Его деятельность
+          находится на стыке права, документооборота и работы с людьми.
+        </p>
+        <ul class="check-list reveal">
+          <li>Принудительное исполнение судебных решений</li>
+          <li>Работа с исполнительными документами</li>
+          <li>Взаимодействие с должниками и взыскателями</li>
+          <li>Применение мер принудительного исполнения</li>
+          <li>Ведение электронного реестра дел</li>
+        </ul>
+        <a href="#" class="btn btn--secondary" style="margin-top: 28px;">Подробнее →</a>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="cards-grid">
+          <div class="card">
+            <p class="card__icon" aria-hidden="true">📋</p>
+            <p class="card__title">Документооборот</p>
+            <p class="card__text">Работа с исполнительными листами, постановлениями и актами описи имущества.</p>
+          </div>
+          <div class="card">
+            <p class="card__icon" aria-hidden="true">💻</p>
+            <p class="card__title">Электронные системы</p>
+            <p class="card__text">Использование автоматизированных систем учёта исполнительных производств.</p>
+          </div>
+          <div class="card">
+            <p class="card__icon" aria-hidden="true">🤝</p>
+            <p class="card__title">Работа с людьми</p>
+            <p class="card__text">Приём граждан, консультации по исполнительным производствам.</p>
+          </div>
+          <div class="card">
+            <p class="card__icon" aria-hidden="true">⚡</p>
+            <p class="card__title">Правовая база</p>
+            <p class="card__text">Применение норм законодательства об исполнительном производстве.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="practice" class="section section--white">
+  <div class="section__inner">
+    <div class="highlight reveal">
+      <h2 class="highlight__title">Цель учебной практики</h2>
+      <p class="highlight__text">
+        Получить практические навыки работы в реальной организации, изучить
+        внутренние процессы, документооборот и электронные системы учёта,
+        а также применить знания по специальности «Программное обеспечение»
+        для анализа и оптимизации информационных процессов.
+      </p>
+      <a href="practice.html" class="btn btn--primary">Перейти к отчёту о практике</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">
+        <span class="footer__brand-icon" aria-hidden="true">⚖</span>
+        Учебная практика
+      </div>
+      <p class="footer__desc">
+        Отчёт о прохождении учебной практики студента специальности «Программное обеспечение»
+        у судебного исполнителя.
+      </p>
+    </div>
+    <div>
+      <p class="footer__nav-title">Разделы</p>
+      <nav class="footer__nav-links" aria-label="Нижняя навигация">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О деятельности</a>
+        <a href="practice.html">Практика</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer__nav-title">Проект</p>
+      <nav class="footer__nav-links">
+        <a href="optimization.html">Оптимизация сайта</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Учебная практика. Специальность «Программное обеспечение».</span>
+    <span>Отчёт студента</span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

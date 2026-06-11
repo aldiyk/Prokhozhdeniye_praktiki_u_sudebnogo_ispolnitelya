@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оптимизация производительности сайта — методы, таблицы, рекомендации для разработчиков.">
+  <title>Оптимизация | Учебная практика</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Основная навигация">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon" aria-hidden="true">⚖</span>
+      Учебная практика
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html"        class="nav__link">Главная</a></li>
+      <li><a href="about.html"        class="nav__link">О деятельности</a></li>
+      <li><a href="practice.html"     class="nav__link">Практика</a></li>
+      <li><a href="optimization.html" class="nav__link">Оптимизация</a></li>
+      <li><a href="contacts.html"     class="nav__link">Контакты</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <nav class="breadcrumb" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Оптимизация</span>
+    </nav>
+    <p class="page-hero__eyebrow">🚀 Основной раздел проекта</p>
+    <h1 class="page-hero__title">Оптимизация<br>производительности сайта</h1>
+    <p class="page-hero__desc">
+      Подробный анализ методов и инструментов повышения скорости загрузки веб-страниц.
+      Практическое руководство для разработчиков.
+    </p>
+  </div>
+</header>
+
+<!-- WHAT IS PERFORMANCE -->
+<section class="section section--white" aria-labelledby="what-heading">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="reveal">
+        <p class="section__eyebrow">Введение</p>
+        <h2 class="section__title" id="what-heading">Что такое производительность сайта?</h2>
+        <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:16px;">
+          Производительность сайта — это совокупность характеристик, определяющих
+          скорость и плавность работы веб-ресурса: время до первого байта (TTFB),
+          время первого отображения контента (FCP), индекс скорости и время
+          полной загрузки страницы.
+        </p>
+        <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:20px;">
+          Ключевые метрики производительности объединены в концепцию
+          Core Web Vitals от Google: <strong>LCP</strong> (Largest Contentful Paint),
+          <strong>FID</strong> / <strong>INP</strong> (взаимодействие) и
+          <strong>CLS</strong> (накопленный сдвиг макета).
+        </p>
+        <div class="tags">
+          <span class="tag">Core Web Vitals</span>
+          <span class="tag">LCP</span>
+          <span class="tag">FCP</span>
+          <span class="tag">CLS</span>
+          <span class="tag">TTFB</span>
+          <span class="tag">INP</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="metric-cards">
+          <div class="metric-card metric-card--green">
+            <p class="metric-card__icon" aria-hidden="true">⚡</p>
+            <p class="metric-card__value">&lt;2.5с</p>
+            <p class="metric-card__label">Хороший LCP (отрисовка крупного блока)</p>
+          </div>
+          <div class="metric-card metric-card--blue">
+            <p class="metric-card__icon" aria-hidden="true">🖱️</p>
+            <p class="metric-card__value">&lt;200мс</p>
+            <p class="metric-card__label">Хороший INP (отклик на взаимодействие)</p>
+          </div>
+          <div class="metric-card metric-card--gold">
+            <p class="metric-card__icon" aria-hidden="true">📐</p>
+            <p class="metric-card__value">&lt;0.1</p>
+            <p class="metric-card__label">Хороший CLS (смещение элементов)</p>
+          </div>
+          <div class="metric-card metric-card--red">
+            <p class="metric-card__icon" aria-hidden="true">🌐</p>
+            <p class="metric-card__value">&lt;800мс</p>
+            <p class="metric-card__label">Хороший TTFB (время до первого байта)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SPEED MATTERS -->
+<section class="section section--alt" aria-labelledby="why-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Важность</p>
+      <h2 class="section__title" id="why-heading">Почему скорость загрузки важна?</h2>
+      <p class="section__desc">Медленный сайт — это не только плохой пользовательский опыт, но и прямые финансовые и репутационные потери.</p>
+    </div>
+    <div class="cards-grid">
+      <article class="card reveal">
+        <p class="card__icon" aria-hidden="true">📉</p>
+        <h3 class="card__title">Потеря пользователей</h3>
+        <p class="card__text">53% мобильных пользователей покидают страницу, если она загружается дольше 3 секунд. Каждая секунда задержки снижает конверсию в среднем на 7%.</p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <p class="card__icon" aria-hidden="true">🔍</p>
+        <h3 class="card__title">Влияние на SEO</h3>
+        <p class="card__text">Google с 2021 года учитывает Core Web Vitals в алгоритме ранжирования. Медленный сайт теряет позиции в поиске, что снижает органический трафик.</p>
+      </article>
+      <article class="card reveal reveal-delay-2">
+        <p class="card__icon" aria-hidden="true">💰</p>
+        <h3 class="card__title">Бизнес-показатели</h3>
+        <p class="card__text">Amazon подсчитал, что задержка в 100 мс стоит 1% годовых продаж. Walmart увеличил конверсию на 2% при ускорении сайта на каждую секунду.</p>
+      </article>
+      <article class="card reveal reveal-delay-3">
+        <p class="card__icon" aria-hidden="true">📱</p>
+        <h3 class="card__title">Мобильные пользователи</h3>
+        <p class="card__text">Более 60% веб-трафика приходится на мобильные устройства с нестабильным соединением. Оптимизация критически важна для этой аудитории.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORS -->
+<section class="section section--white" aria-labelledby="factors-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Анализ</p>
+      <h2 class="section__title" id="factors-heading">Факторы, влияющие на производительность</h2>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <div class="progress-bars">
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Неоптимизированные изображения</span>
+              <span>до 80% объёма</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Неминифицированный JS/CSS</span>
+              <span>до 40% объёма</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="40%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Лишние HTTP-запросы</span>
+              <span>до 35% задержки</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="35%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Блокирующий рендеринг</span>
+              <span>до 30% задержки</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="30%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Отсутствие кэширования</span>
+              <span>до 25% потерь</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="25%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item__label">
+              <span>Медленный сервер (TTFB)</span>
+              <span>до 20% задержки</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-width="20%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="info-block">
+          <p class="info-block__title">Внешние и серверные факторы</p>
+          <ul class="check-list">
+            <li>Время ответа сервера (TTFB) — зависит от хостинга и конфигурации</li>
+            <li>Географическое расстояние до сервера — решается CDN</li>
+            <li>Скорость соединения пользователя</li>
+            <li>Мощность устройства пользователя</li>
+            <li>Сторонние скрипты: аналитика, чаты, реклама</li>
+            <li>Количество DNS-запросов при загрузке</li>
+            <li>Отсутствие HTTP/2 или HTTP/3 на сервере</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODS ACCORDION -->
+<section class="section section--alt" aria-labelledby="methods-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Методы</p>
+      <h2 class="section__title" id="methods-heading">Методы оптимизации</h2>
+      <p class="section__desc">Нажмите на карточку для подробного описания каждого метода.</p>
+    </div>
+    <div class="accordion" role="list">
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-images" aria-expanded="false" aria-controls="acc-images">
+          <span>🖼️ &nbsp; Оптимизация изображений</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-images" role="region">
+          <p style="margin-bottom:12px;">Изображения составляют до 80% объёма типичной веб-страницы. Правильная оптимизация даёт наибольший прирост скорости при минимальных усилиях.</p>
+          <ul class="check-list">
+            <li><strong>WebP / AVIF</strong> — современные форматы, дающие сжатие на 25–50% лучше JPEG при том же качестве. Используйте <code>&lt;picture&gt;</code> с фолбэком для старых браузеров.</li>
+            <li><strong>Правильные размеры</strong> — не загружайте изображение 2000px там, где показывается 400px. Используйте атрибут <code>srcset</code> для адаптивных изображений.</li>
+            <li><strong>Сжатие без потерь</strong> — инструменты Squoosh, ImageOptim, mozjpeg позволяют снизить вес на 30–70% без видимой потери качества.</li>
+            <li><strong>CSS-спрайты</strong> — объединение иконок в один файл снижает количество HTTP-запросов. Для современных проектов — SVG-спрайты.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-lazy" aria-expanded="false" aria-controls="acc-lazy">
+          <span>⏳ &nbsp; Lazy Loading (отложенная загрузка)</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-lazy" role="region">
+          <p style="margin-bottom:12px;">Lazy Loading откладывает загрузку ресурсов до момента, когда они нужны пользователю — обычно при приближении к области видимости.</p>
+          <ul class="check-list">
+            <li><strong>Нативный Lazy Loading</strong> — атрибут <code>loading="lazy"</code> для изображений и iframe поддерживается всеми современными браузерами без JavaScript.</li>
+            <li><strong>Intersection Observer API</strong> — JavaScript-API для более тонкого управления: предзагрузка при появлении элемента в 200px от вьюпорта.</li>
+            <li><strong>Приоритет LCP-изображения</strong> — главное изображение страницы должно иметь <code>loading="eager"</code> и <code>fetchpriority="high"</code> для быстрой отрисовки.</li>
+            <li><strong>Скрипты по требованию</strong> — загружайте тяжёлые библиотеки (карты, видеоплеер) только при взаимодействии пользователя с элементом.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-minify" aria-expanded="false" aria-controls="acc-minify">
+          <span>📦 &nbsp; Минификация CSS и JavaScript</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-minify" role="region">
+          <p style="margin-bottom:12px;">Минификация удаляет из кода пробелы, комментарии и сокращает имена переменных, уменьшая размер файлов на 20–70%.</p>
+          <ul class="check-list">
+            <li><strong>CSS</strong> — CSSNano, CleanCSS. Типичное сжатие style.css с 80 КБ до 55 КБ.</li>
+            <li><strong>JavaScript</strong> — Terser, ESBuild. Дополнительно выполняет tree-shaking (удаление неиспользуемого кода).</li>
+            <li><strong>HTML</strong> — html-minifier-terser. Убирает лишние пробелы, атрибуты, комментарии.</li>
+            <li><strong>Bundling</strong> — объединение нескольких файлов в один снижает количество HTTP-запросов. Webpack, Vite, Rollup.</li>
+            <li><strong>Code Splitting</strong> — разбиение бандла на чанки, загружаемые по мере необходимости, ускоряет первоначальную загрузку.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-cache" aria-expanded="false" aria-controls="acc-cache">
+          <span>🗄️ &nbsp; Кэширование</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-cache" role="region">
+          <p style="margin-bottom:12px;">Кэширование позволяет браузеру сохранять ресурсы локально, избегая повторных сетевых запросов при следующем посещении.</p>
+          <ul class="check-list">
+            <li><strong>Cache-Control</strong> — заголовок с директивами <code>max-age</code>, <code>immutable</code>, <code>stale-while-revalidate</code> для управления сроком кэша.</li>
+            <li><strong>Хэш в именах файлов</strong> — <code>style.a3f9b2.css</code> позволяет установить бесконечный <code>max-age</code> для статики, инвалидируя кэш только при изменении файла.</li>
+            <li><strong>Service Worker</strong> — программируемый кэш в браузере. Обеспечивает работу офлайн и мгновенную повторную загрузку.</li>
+            <li><strong>CDN-кэширование</strong> — сети доставки контента (Cloudflare, Fastly) хранят копии ресурсов на серверах ближе к пользователю.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-compress" aria-expanded="false" aria-controls="acc-compress">
+          <span>🔧 &nbsp; Сжатие данных (Gzip / Brotli)</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-compress" role="region">
+          <p style="margin-bottom:12px;">Серверное сжатие текстовых ресурсов перед отправкой браузеру снижает объём передаваемых данных на 60–80%.</p>
+          <ul class="check-list">
+            <li><strong>Brotli</strong> — современный алгоритм от Google, сжимает на 15–25% лучше Gzip. Поддерживается всеми современными браузерами.</li>
+            <li><strong>Gzip</strong> — широко поддерживаемый стандарт. Достаточен для большинства проектов, если Brotli недоступен.</li>
+            <li><strong>Применение</strong> — сжимайте HTML, CSS, JS, JSON, SVG, XML. Изображения и видео сжимать смысла нет — они уже сжаты.</li>
+            <li><strong>Настройка Nginx</strong>: <code>gzip on; gzip_types text/css application/javascript;</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-requests" aria-expanded="false" aria-controls="acc-requests">
+          <span>🌐 &nbsp; Оптимизация запросов</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-requests" role="region">
+          <p style="margin-bottom:12px;">Каждый HTTP-запрос добавляет задержку. Сокращение их числа и оптимизация порядка загрузки существенно ускоряет страницу.</p>
+          <ul class="check-list">
+            <li><strong>DNS Prefetch</strong> — <code>&lt;link rel="dns-prefetch" href="//cdn.example.com"&gt;</code> разрешает DNS заранее.</li>
+            <li><strong>Preconnect</strong> — устанавливает соединение с внешним хостом заранее: <code>&lt;link rel="preconnect"&gt;</code>.</li>
+            <li><strong>Preload критических ресурсов</strong> — <code>&lt;link rel="preload" as="font"&gt;</code> для шрифтов, критического CSS.</li>
+            <li><strong>HTTP/2 и HTTP/3</strong> — мультиплексирование позволяет загружать несколько ресурсов через одно соединение.</li>
+            <li><strong>Устранение render-blocking</strong> — CSS в <code>&lt;head&gt;</code>, скрипты с <code>defer</code> или <code>async</code> в конце <code>&lt;body&gt;</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item" role="listitem">
+        <button class="accordion__trigger" data-target="acc-reduce" aria-expanded="false" aria-controls="acc-reduce">
+          <span>✂️ &nbsp; Сокращение числа ресурсов</span>
+          <span class="accordion__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion__body" id="acc-reduce" role="region">
+          <p style="margin-bottom:12px;">Лучший запрос — тот, которого нет. Аудит зависимостей позволяет значительно снизить «вес» проекта.</p>
+          <ul class="check-list">
+            <li><strong>Аудит зависимостей</strong> — удалите неиспользуемые npm-пакеты. Инструменты: <code>depcheck</code>, Bundlephobia.</li>
+            <li><strong>Замена тяжёлых библиотек</strong> — вместо jQuery (87 КБ) — нативный JS; вместо Moment.js (67 КБ) — date-fns или Temporal API.</li>
+            <li><strong>SVG вместо иконочных шрифтов</strong> — загружайте только нужные иконки, а не весь шрифт на 200+ глифов.</li>
+            <li><strong>Critical CSS</strong> — встраивайте в <code>&lt;style&gt;</code> только CSS, необходимый для отрисовки первого экрана.</li>
+            <li><strong>Удаление неиспользуемого CSS</strong> — PurgeCSS анализирует HTML и удаляет из CSS неиспользуемые правила.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="section section--white" aria-labelledby="table-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Сравнение</p>
+      <h2 class="section__title" id="table-heading">Таблица методов оптимизации</h2>
+      <p class="section__desc">Сводная таблица методов с оценкой сложности внедрения, эффекта и приоритета.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Метод</th>
+            <th>Область</th>
+            <th>Сложность</th>
+            <th>Эффект</th>
+            <th>Приоритет</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Конвертация в WebP/AVIF</strong></td>
+            <td>Изображения</td>
+            <td>Низкая</td>
+            <td>Снижение объёма до 50%</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Lazy loading изображений</strong></td>
+            <td>Загрузка</td>
+            <td>Низкая</td>
+            <td>Ускорение первой загрузки</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Минификация CSS/JS</strong></td>
+            <td>Ресурсы</td>
+            <td>Низкая</td>
+            <td>Снижение объёма 20–60%</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Brotli/Gzip сжатие</strong></td>
+            <td>Сервер</td>
+            <td>Низкая</td>
+            <td>Снижение трафика 60–80%</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Кэширование ресурсов</strong></td>
+            <td>Сервер</td>
+            <td>Средняя</td>
+            <td>Мгновенная повторная загрузка</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Defer/Async скрипты</strong></td>
+            <td>JavaScript</td>
+            <td>Низкая</td>
+            <td>Устранение блокировки рендера</td>
+            <td><span class="badge badge--high">Высокий</span></td>
+          </tr>
+          <tr>
+            <td><strong>Адаптивные изображения (srcset)</strong></td>
+            <td>Изображения</td>
+            <td>Средняя</td>
+            <td>Загрузка нужного размера</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>Critical CSS Inlining</strong></td>
+            <td>CSS</td>
+            <td>Средняя</td>
+            <td>Быстрая отрисовка экрана</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>CDN для статики</strong></td>
+            <td>Сеть</td>
+            <td>Средняя</td>
+            <td>Снижение задержки по геолокации</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>Preconnect / DNS-prefetch</strong></td>
+            <td>Сеть</td>
+            <td>Низкая</td>
+            <td>Сокращение времени соединения</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>Service Worker</strong></td>
+            <td>Кэш</td>
+            <td>Высокая</td>
+            <td>Работа офлайн, мгновенный кэш</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>Tree Shaking JS</strong></td>
+            <td>JavaScript</td>
+            <td>Средняя</td>
+            <td>Удаление мёртвого кода</td>
+            <td><span class="badge badge--med">Средний</span></td>
+          </tr>
+          <tr>
+            <td><strong>PurgeCSS</strong></td>
+            <td>CSS</td>
+            <td>Средняя</td>
+            <td>Удаление неиспользуемых стилей</td>
+            <td><span class="badge badge--low">Ниже среднего</span></td>
+          </tr>
+          <tr>
+            <td><strong>HTTP/2 / HTTP/3</strong></td>
+            <td>Сервер</td>
+            <td>Высокая</td>
+            <td>Мультиплексирование запросов</td>
+            <td><span class="badge badge--low">Ниже среднего</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section section--alt" aria-labelledby="benefits-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Результаты</p>
+      <h2 class="section__title" id="benefits-heading">Преимущества оптимизации</h2>
+    </div>
+    <div class="cards-grid">
+      <article class="card reveal">
+        <p class="card__icon" aria-hidden="true">😊</p>
+        <h3 class="card__title">Лучший UX</h3>
+        <p class="card__text">Быстрый сайт воспринимается как более качественный и надёжный. Пользователи дольше остаются на странице и чаще возвращаются.</p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <p class="card__icon" aria-hidden="true">📈</p>
+        <h3 class="card__title">Рост конверсии</h3>
+        <p class="card__text">Ускорение загрузки на 1 секунду увеличивает конверсию интернет-магазина на 7%. Прямая корреляция между скоростью и прибылью.</p>
+      </article>
+      <article class="card reveal reveal-delay-2">
+        <p class="card__icon" aria-hidden="true">🔍</p>
+        <h3 class="card__title">Позиции в поиске</h3>
+        <p class="card__text">Google ранжирует быстрые страницы выше. Хорошие Core Web Vitals — конкурентное преимущество в органическом поиске.</p>
+      </article>
+      <article class="card reveal reveal-delay-3">
+        <p class="card__icon" aria-hidden="true">🌍</p>
+        <h3 class="card__title">Доступность</h3>
+        <p class="card__text">Пользователи с медленным интернетом и слабыми устройствами (развивающиеся рынки) получают доступ к контенту без задержек.</p>
+      </article>
+      <article class="card reveal">
+        <p class="card__icon" aria-hidden="true">💲</p>
+        <h3 class="card__title">Экономия трафика</h3>
+        <p class="card__text">Меньший объём передаваемых данных снижает расходы на CDN и хостинг. Для пользователей — экономия мобильного трафика.</p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <p class="card__icon" aria-hidden="true">🌱</p>
+        <h3 class="card__title">Экологичность</h3>
+        <p class="card__text">Оптимизированные сайты потребляют меньше серверных ресурсов и электроэнергии — вклад в снижение углеродного следа.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section class="section section--white" aria-labelledby="rec-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Практикам</p>
+      <h2 class="section__title" id="rec-heading">Рекомендации для разработчиков</h2>
+      <p class="section__desc">Пошаговый план внедрения оптимизации на новом или существующем проекте.</p>
+    </div>
+    <div class="two-col">
+      <div class="rec-list reveal">
+        <div class="rec-item">
+          <p class="rec-item__num">1</p>
+          <div>
+            <p class="rec-item__title">Измерьте текущий baseline</p>
+            <p class="rec-item__text">Запустите Lighthouse в DevTools и PageSpeed Insights. Зафиксируйте исходные метрики LCP, CLS, INP, TBT. Без измерений нельзя оценить эффект улучшений.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">2</p>
+          <div>
+            <p class="rec-item__title">Начните с изображений</p>
+            <p class="rec-item__text">Конвертируйте все изображения в WebP, добавьте <code>loading="lazy"</code> везде кроме LCP-изображения, укажите явные <code>width</code> и <code>height</code>.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">3</p>
+          <div>
+            <p class="rec-item__title">Настройте сервер</p>
+            <p class="rec-item__text">Включите Brotli/Gzip, настройте заголовки <code>Cache-Control</code>, убедитесь в поддержке HTTP/2. Эти изменения не требуют правки кода фронтенда.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">4</p>
+          <div>
+            <p class="rec-item__title">Минифицируйте и бандлите</p>
+            <p class="rec-item__text">Подключите сборщик (Vite, Webpack). Используйте хэши в именах файлов для долгосрочного кэширования. Удалите неиспользуемые зависимости.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rec-list reveal reveal-delay-1">
+        <div class="rec-item">
+          <p class="rec-item__num">5</p>
+          <div>
+            <p class="rec-item__title">Оптимизируйте критический путь рендеринга</p>
+            <p class="rec-item__text">CSS в <code>&lt;head&gt;</code>, скрипты с <code>defer</code>. Встройте critical CSS для первого экрана. Удалите render-blocking ресурсы.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">6</p>
+          <div>
+            <p class="rec-item__title">Используйте CDN</p>
+            <p class="rec-item__text">Подключите Cloudflare или аналог для статических ресурсов. Выберите хостинг с дата-центром ближе к целевой аудитории.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">7</p>
+          <div>
+            <p class="rec-item__title">Автоматизируйте проверки</p>
+            <p class="rec-item__text">Добавьте Lighthouse CI в GitHub Actions. Установите бюджеты производительности — PR с деградацией метрик не пройдёт проверку.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <p class="rec-item__num">8</p>
+          <div>
+            <p class="rec-item__title">Следите за реальными данными</p>
+            <p class="rec-item__text">Lighthouse — лабораторные данные. Подключите Google Search Console и CrUX для мониторинга реальных пользовательских метрик (RUM).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="section section--alt" aria-labelledby="tools-heading">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__eyebrow">Инструменты</p>
+      <h2 class="section__title" id="tools-heading">Инструменты для анализа производительности</h2>
+    </div>
+    <div class="cards-grid">
+      <article class="card reveal">
+        <p class="card__icon" aria-hidden="true">🔦</p>
+        <h3 class="card__title">Google Lighthouse</h3>
+        <p class="card__text">Встроен в Chrome DevTools. Аудит производительности, доступности, SEO и PWA. Даёт оценку от 0 до 100 и детальные рекомендации.</p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <p class="card__icon" aria-hidden="true">📊</p>
+        <h3 class="card__title">PageSpeed Insights</h3>
+        <p class="card__text">Онлайн-инструмент Google: сочетает лабораторные данные Lighthouse с реальными данными Chrome UX Report для вашего URL.</p>
+      </article>
+      <article class="card reveal reveal-delay-2">
+        <p class="card__icon" aria-hidden="true">🌊</p>
+        <h3 class="card__title">WebPageTest</h3>
+        <p class="card__text">Детальный анализ с водопадом загрузки, видеозаписью, тестами с разных геолокаций и имитацией медленного соединения.</p>
+      </article>
+      <article class="card reveal reveal-delay-3">
+        <p class="card__icon" aria-hidden="true">🔬</p>
+        <h3 class="card__title">Chrome DevTools</h3>
+        <p class="card__text">Вкладки Network, Performance, Coverage. Позволяет профилировать загрузку, находить неиспользуемый CSS/JS, анализировать рендеринг.</p>
+      </article>
+    </div>
+    <div class="highlight reveal" style="margin-top:40px;">
+      <h3 class="highlight__title">Реализация на этом сайте</h3>
+      <p class="highlight__text">
+        Данный сайт создан с учётом всех описанных принципов: семантическая HTML-разметка,
+        CSS-переменные, минимальный JavaScript без зависимостей, <code>loading="lazy"</code>
+        для изображений, <code>defer</code> для скрипта, Intersection Observer для анимаций
+        и прогресс-баров. Всё это обеспечивает высокую оценку Lighthouse.
+      </p>
+      <a href="contacts.html" class="btn btn--primary">Связаться с автором →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">
+        <span class="footer__brand-icon" aria-hidden="true">⚖</span>
+        Учебная практика
+      </div>
+      <p class="footer__desc">
+        Отчёт о прохождении учебной практики студента специальности «Программное обеспечение» у судебного исполнителя.
+      </p>
+    </div>
+    <div>
+      <p class="footer__nav-title">Разделы</p>
+      <nav class="footer__nav-links" aria-label="Нижняя навигация">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О деятельности</a>
+        <a href="practice.html">Практика</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer__nav-title">Проект</p>
+      <nav class="footer__nav-links">
+        <a href="optimization.html">Оптимизация сайта</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 Учебная практика. Специальность «Программное обеспечение».</span>
+    <span>Отчёт студента</span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
